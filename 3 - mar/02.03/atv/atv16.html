@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Digite o numero para saber sua tabuada:</p>
+    <input type="text" name="" id="numero">
+    <br>
+    <button onclick="ver()">Ver Tabuada</button> <br> <br>
+    <div id="lala"> </div> 
+</body>
+</html>
+<script>
+    function ver(){
+        num = Number(numero.value);
+        var x1 = num * 1;
+        var x2 = num * 2;
+        var x3 = num * 3;
+        var x4 = num * 4;
+        var x5 = num * 5;
+        var x6 = num * 6;
+        var x7 = num * 7;
+        var x8 = num * 8;
+        var x9 = num * 9;
+        lala.innerHTML = `${num} x 1 = ${x1} <br> ${num} x 2 = ${x2} <br> ${num} x 3 = ${x3} <br> ${num} x 4 = ${x4} <br> ${num} x 5 = ${x5} <br> ${num} x 6 = ${x6} <br> ${num} x 7 = ${x7} <br> ${num} x 8 = ${x8} <br> ${num} x 9 = ${x9} <br>`;
+    }
+</script>

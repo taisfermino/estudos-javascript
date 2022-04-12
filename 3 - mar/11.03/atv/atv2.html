@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 2</title>
+</head>
+<body>
+    <select id="fruta">
+        <option value="">- Selecione sua fruta favorita -</option>
+        <option value="Abacaxi e tem 50 calorias">Abacaxi</option>
+        <option value="Banana e tem 89 calorias">Banana</option>
+        <option value="Carambola e tem 31 calorias">Carambola</option>
+    </select> <br><br>
+    <br>
+    <button onclick="mostrar()">Mostrar Fruta</button>
+    <div id="lala"></div>
+</body>
+</html>
+<script>
+    function mostrar(){
+        var frutinha = fruta.value;
+        lala.innerHTML = 'Sua fruta favorita é ' + frutinha + ' por unidade';
+    }
+</script>

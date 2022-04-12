@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    Informe um numero entre 1 e 10:
+    <input type="text" id="valor">
+
+    <button onclick="analise()">Sortear</button>
+
+    <div id="result"></div>
+
+</body>
+</html>
+
+<script>
+
+    var contador = 0; 
+   
+    function analise() {
+        var sorteio = parseInt((Math.random() * 11)); 
+        var numero = valor.value;
+
+        if (numero > 10) {
+           alert ('Número Invalido')
+        
+        }else if(sorteio == numero) {
+                result.innerHTML += `Parabens, você foi sorteado(a) após ${contador} sorteios!`;
+            } 
+            else if (numero <= 10) {
+            alert (`Sorteios realizados: ${contador}`);
+            contador++; 
+            }
+    }
+
+</script>
+
+
+

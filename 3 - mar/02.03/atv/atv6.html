@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 6</title>
+</head>
+<body>
+    <p>Preencha o sabor da pizza</p>
+    <input type="text" name="" id="sabor" placeholder="Sabor da Pizza">
+    <p>Preencha o preço da pizza</p>
+    <input type="text" name="" id="preco" placeholder="Preço da Pizza">
+    <p>Quantidade de pessoas que vão comer</p>
+    <input type="text" name="" id="qtd" placeholder="Quantidade de pessoas">
+    <br>
+    <button onclick="calcular()">Ver valor por amigo</button>
+    <div id="lala">
+
+    </div>
+</body>
+</html>
+<script>
+    function calcular(){
+        var resultado = preco.value / qtd.value;
+       
+        lala.innerHTML = `Cada amigo vai colaborar com <u>R$${resultado}</u> para a pizza de ` + sabor.value
+    }
+</script>

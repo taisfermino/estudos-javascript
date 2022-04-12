@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 2</title>
+</head>
+<body>
+    <p>Digite um numero qualquer</p>
+    <input type="text" name="" id="inp_numero"> <br><br>
+    <button onclick="Cadastrar()">Cadastrar</button>
+    <button onclick="Historico()">Ver Historico</button> <br><br>
+    <div id="msg"></div>
+</body>
+</html>
+<script>
+
+vt_numeros = [];
+
+    function Cadastrar(){
+        vt_numeros.push (Number(inp_numero.value));
+    }
+
+    function Historico(){
+        var maior_num = 0;
+        var total = 0;
+
+        // Maior numero
+        for(var i = 0; i < vt_numeros.length; i++){
+            if(vt_numeros[i] > maior_num){
+                maior_num = vt_numeros[i];
+            }
+        }
+
+        // Menor numero
+        var menor_num = maior_num;
+        for(var i = 0; i < vt_numeros.length; i++){
+            if(vt_numeros[i] < menor_num){
+               menor_num = vt_numeros[i];
+            }
+        }
+
+        // Total numeros
+        for(var i = 0; i < vt_numeros.length; i++){
+            total = total + vt_numeros[i];
+        }
+
+        // Media numeros
+        var media = total / 4;
+
+
+        for(var i = 0; i < vt_numeros.length; i++){
+            msg.innerHTML += `${i + 1}° Numero ${vt_numeros[i]} <br>`;
+        }
+
+        msg.innerHTML += `<br> <br>Maior: ${maior_num}<br>`;
+        msg.innerHTML += `Menor: ${menor_num}<br>`;
+        msg.innerHTML += `Media: ${media}<br>`;
+        msg.innerHTML += `Total: ${total}<br>`;
+    }
+</script>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo</title>
+</head>
+<body>
+    Entre com a média <input type="text" name="" id="inp_media">
+    <br><br>
+    <button onclick="analisar()">ver</button>
+</body>
+</html>
+<script>
+    function analisar(){
+    var frase = "Bom dia, flor do dia!!";
+    var ax_resposta = frase.startsWith("Bom");
+    var ax_aprovado =  inp_media.value >= 6;
+    alert(ax_aprovado);
+}
+</script>

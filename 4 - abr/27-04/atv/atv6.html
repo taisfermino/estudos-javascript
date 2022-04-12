@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 6</title>
+</head>
+<body>
+    <p>Insira a frequencia do aluno</p>
+    <input type="text" name="" id="freq_inp">
+    <br>
+    <button onclick="analisar()">Analisar frequência</button>
+    <br><br>
+    <div id="msg"></div>
+
+    
+
+</body>
+</html>
+<script>
+    function analisar(){
+        var freq = Number(freq_inp.value);
+
+        freq < 75 ? msg.innerHTML = `<img src="https://viagemeturismo.abril.com.br/wp-content/uploads/2016/12/turista.jpg?quality=70&strip=all" alt="" height="400px">` : msg.innerHTML = `<img src="https://colegioguarulhos.com.br/v2/includes/cg/img/aluno2.png" alt="" height="400px">`;
+    }
+</script>

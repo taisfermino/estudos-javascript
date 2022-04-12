@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 2</title>
+</head>
+<body>
+    Insira um local <input type="text" name="" id="inp_lugar">
+    <button onclick="cadastrar()">Cadastrar</button> <br><br>
+    Digite o numero do local <input type="text" name="" id="inp_num">
+    <button onclick="relembrar()">Relembrar viagem</button> <br><br>
+    <div id="msg"></div>
+</body>
+</html>
+<script>
+    lugares = [];
+
+    function cadastrar() {
+        var novo_lugar = inp_lugar.value;
+
+        lugares.push(novo_lugar);
+    }
+
+    function relembrar() {
+        var numero = Number(inp_num.value);
+        var pesquisa = numero - 1;
+
+        if (lugares.length >= 0 && numero <= lugares.length) {
+            var lugar_pesq = lugares[pesquisa];
+            msg.innerHTML = `${lugar_pesq}`;
+        } 
+        else {
+            msg.innerHTML = `Você não fez uma ${numero}ª viagem!`;
+        }
+
+    }
+</script>

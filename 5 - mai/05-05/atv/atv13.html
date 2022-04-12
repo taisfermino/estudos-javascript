@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 13</title>
+</head>
+<body>
+    <p>Qual o numero que deseja saber o fatorial</p>
+    <input type="text" name="" id="num_inp"> <br>
+    <button onclick="calcular()">Calcular fatorial</button> <br><br>
+    <div id="msg"></div>
+</body>
+</html>
+<script>
+    function calcular(){
+        numero = Number(num_inp.value);
+        var resultado = 1;
+
+        for(var count=1 ; count<=numero ; count++){
+         resultado *= count;
+        }
+
+        msg.innerHTML = `${resultado}`;
+    }
+</script>

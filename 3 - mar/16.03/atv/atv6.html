@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 6</title>
+</head>
+<body>
+    <p>Digite o valor da renda familiar</p>
+    <input type="text" id="renda">
+    <p>Digite o valor da prestação</p>
+    <input type="text" id="prestacao"><br><br>
+    <button onclick="ver()">Verificar Financiamento</button> <br><br>
+    <div id="lala"></div>
+
+    
+</body>
+</html>
+<script>
+    function ver(){
+        var ren = Number(renda.value);
+        var emprestimo = Number(prestacao.value);
+
+        var porc = (emprestimo/ren)*100;
+
+        if (porc>30) {
+            lala.innerHTML = 'A prestação corresponde a ' + porc + '% da renda familiar <br><b style="color: red;">Será necessário complementar a renda familiar</b>';
+        } else {
+            lala.innerHTML = 'A prestação corresponde a ' + porc + '% da renda familiar';
+        }
+    }
+</script>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Insira seu salário</p>
+    <input type="text" name="" id="sal" placeholder="digite o salario">
+    <br><br><br>
+    <button onclick="calcula()">Calcular Descontos</button>
+    <div id="lala"></div>
+</body>
+</html>
+<script>
+    function calcula(){
+        var inss = sal.value * 0.1;
+        var ir = sal.value * 0.2;
+        var desc = ir + inss;
+        var liq = sal.value - desc;
+        
+        lala.innerHTML = `<h3>Seus descontos serão de:</h3> <p>INSS:<b> R$${inss}</b></p> <p>IR:<b> R$${ir}</b></p> <p>Total de descontos:<b> R$${desc}</b></p> <p>Seu salario após o desconto será:<u><b> R$${liq}</b></u></p> `;
+    }
+</script>

@@ -1,0 +1,71 @@
+body{
+    display: grid; 
+    place-items: center;
+    background-color: rgb(112, 161, 209);
+}
+
+.container{
+    display:flex; 
+    margin-top: 250px;
+}
+
+img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.filho{
+    width: 520px; 
+    margin: 50px;
+    display: grid; 
+    place-items: center;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.linha{
+    display: flex;
+}
+p{
+    text-align: center;
+    font-size: 20px;
+}
+
+.heros{
+    width: 90px;
+    height: 80px;
+    border-radius: 50%;
+margin: 20px;
+}
+
+.nome{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+    font-size: 15px;
+    color: rgb(20, 44, 97);
+}
+
+.grid{
+display: flex;
+flex: 1;
+flex-direction: column;
+background-color: white;
+padding: 20px;
+gap: 10px;
+width: auto;
+}
+
+.grid div{
+    display: flex;
+    align-items: center;
+    min-width: 470px;
+    height: 90px;
+}
+
+.grid div p {
+    align-self: flex-end;
+}
+
+.Goku{
+    width: 60px;
+}

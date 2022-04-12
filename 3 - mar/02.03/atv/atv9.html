@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 9</title>
+</head>
+<body>
+    <p>Digite a quantidade de filhos:</p>
+    <input type="text" id="filhos" placeholder="Numero de Filhos">
+    <br><br>
+    <button onclick="calcula()">Calcular Auxilio Filhos</button>
+    <div id="lala">
+
+    </div>
+</body>
+</html>
+<script>
+    
+    function calcula(){
+        var auxilio = 25 * filhos.value;
+        lala.innerHTML = `Voce tem `+ filhos.value +` filhos, logo, seu "Auxilio Filhos" será de <b>R$${auxilio}</b>.`;
+    }
+</script>

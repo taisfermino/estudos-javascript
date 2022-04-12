@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variavel Global</title>
+</head>
+<body>
+    Voce clicou em mim <b id="lala">0</b> vezes
+    <br><br>
+    <button onclick="conta()">CLICA AQUI</button>
+    <button onclick="soma()">SOMA 100</button>
+</body>
+</html>
+<script>
+    var vezes = 0;
+    function conta(){
+        vezes++;
+        lala.innerHTML = vezes;
+    }
+
+    function soma(){
+        vezes += 100;
+        lala.innerHTML = vezes;
+    }
+</script>

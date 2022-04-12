@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 3</title>
+</head>
+<body>
+    <p>Insira o menor valor numérico</p>
+    <input type="text" name="" id="inp_menor">
+    <p>Insira o maior valor numérico</p>
+    <input type="text" name="" id="inp_maior">
+    <p>Insira o ritmo de crescimento</p>
+    <input type="" name="" id="inp_cresc"> <br><br>
+    <button onclick="contagem()">Contagem loka</button> <br><br>
+    <div id="lala"></div>
+</body>
+</html>
+<script>
+    function contagem(){
+    var menor = Number(inp_menor.value);
+    var maior = Number(inp_maior.value);
+    var cresc = Number(inp_cresc.value);
+    lala.innerHTML = ``;
+    for(var aux = maior; aux >= menor; aux = aux - cresc){
+        lala.innerHTML += `${aux} <br>`;
+        
+    }
+}
+</script>

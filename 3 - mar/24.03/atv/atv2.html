@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Insira a media</p>
+    <input type="text" name="" id="media">
+    <p>Insira a frequencia</p>
+    <input type="text" name="" id="frequencia">
+    <br>
+    <button onclick="avaliar()">Avaliar</button>
+    <div id="lala"></div>
+</body>
+</html>
+<script>
+    function avaliar(){
+        var med = Number(media.value);
+        var freq = Number(frequencia.value);
+
+        if (med > 10) {
+            lala.innerHTML = 'Média Invalida!';
+        } 
+
+        else{
+
+         if (med >= 8){
+            lala.innerHTML = 'Você estuda muito!';
+        }
+
+        else {
+            lala.innerHTML = 'Você poderia estudar mais';
+        }
+
+        if(freq < 60){
+            lala.innerHTML += '<br> Você falta muito!';
+        }
+        
+        else {
+            lala.innerHTML += '<br> Você falta pouco!';
+        }
+    }
+}
+</script>

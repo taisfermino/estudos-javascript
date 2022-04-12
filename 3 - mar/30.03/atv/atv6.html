@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deu match?</title>
+</head>
+<body>
+    <p>Insira os anos de trabalho (para o pai da amada)</p>
+    <input type="text" name="" id="anosTrabalho">
+    <p>Insira os Kg de Trigo que as plantações renderam</p>
+    <input type="text" name="" id="kgTrigo">
+    <p>Insira os dias de faltas por doença</p>
+    <input type="text" name="" id="faltas">
+    <br>
+    <button onclick="iai()">Deu match?</button>
+    <br><br>
+    <div id="lala"></div>
+
+
+</body>
+</html>
+<script>
+    function iai(){
+        var anos = Number(anosTrabalho.value);
+        var trigo = Number(kgTrigo.value);
+        var falta = Number(faltas.value);
+
+        if(anosTrabalho.value==""){
+        alert('preencher a quantidade anos trabalhados corretamente');
+        }
+
+        else if(kgTrigo.value==""){
+        alert('preencher a quantidade kilos de trigo corretamente');
+        }
+
+        else{
+            if(anos>30){
+                lala.innerHTML = 'Desse jeito minha filha vai ficar para titia';
+            }
+            else if (anos >= 5 && anos <= 30 && trigo >= 300 && falta <= 5) {
+                lala.innerHTML = 'Minha filha será sua! <br><img src="https://fashionistando.uai.com.br/wp-content/uploads/sites/11/2020/07/noivas-vestido-aluguel-em-bh-fashionistando-aluguel.png" alt="" width="500px">';
+            } else {
+                lala.innerHTML = 'Deu ruim! Trabalhe mais 2 anos <br><img src="https://noticiasdatv.uol.com.br/media/_versions/everybody-hates-chris-julius-dia-dos-pais_fixed_large.jpg" alt="" width="500px">';
+            }
+    }
+}
+</script>

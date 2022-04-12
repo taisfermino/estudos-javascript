@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parcelamento</title>
+</head>
+<body>
+    <p>Qual o modo de pagamento</p>
+    <select name="" id="sel_pagamento">
+        <option value="1">Dinheiro</option>
+        <option value="1">Cartão de débito</option>
+        <option value="0">Cartão de crédito</option>
+        <option value="0">Boleto</option>
+    </select>
+    <br>
+    <button onclick="analisar()">Analisar compra</button>
+</body>
+</html>
+<script>
+    function analisar(){
+        var pagamento = Number(sel_pagamento.value);
+
+        if (pagamento == 1) {
+            alert("Você terá que pagar a vista");
+        } else {
+            alert("Pagamento poderá ser parcelado");
+        }
+    }
+</script>

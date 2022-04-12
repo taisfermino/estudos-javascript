@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <select id="sel_fruta">
+        <option value="0">Melancia</option>
+        <option value="1">Banana</option>
+        <option value="2">Cereja</option>
+        <option value="3">Laranja</option>
+    </select> <br><br>
+
+    <button onclick="pagar()">Pagar R$2,00 e Sortear</button>
+    <button onclick="encerrar()">Encerrar a Noitada</button> <br><br>
+
+    <div id="div_msg"></div>
+</body>
+
+</html>
+
+<script>
+
+    var rodada = 0;
+    var caixa = 0;
+    var fruta_escolhida = 0;
+
+    function pagar() {
+
+        rodada++;
+        fruta_escolhida = sel_fruta.value;
+
+        var contador_fruta = 0;
+
+        div_msg.innerHTML = ``;
+
+        for (var contador = 0; contador < 4; contador++) {
+
+            var sorteio = parseInt(Math.random() * 4);
+
+            if (sel_fruta.value == sorteio) {
+                contador_fruta++;
+            }
+
+            sorteio == 0 ?
+                div_msg.innerHTML += 
+                `<img style="width: 100px" 
+                src="https://saude.abril.com.br/wp-content/uploads/2016/10/melancia_2.jpg">` :
+
+                sorteio == 1 ?
+                    div_msg.innerHTML += 
+                    `<img style="width: 100px" 
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQ6dX0JaSil_P3j77-hubK4QWXKJAmmt68AA&usqp=CAU">` :
+
+                    sorteio == 2 ?
+                        div_msg.innerHTML += 
+                        `<img style="width: 100px" 
+                        src="https://i.pinimg.com/736x/2d/9a/32/2d9a32c2eadfb61cfa339d70089cd0f8.jpg">` :
+
+                        sorteio == 3 ?
+                            div_msg.innerHTML += 
+                            `<img style="width: 100px" 
+                            src="https://png.pngtree.com/png-clipart/20201126/ourlarge/pngtree-orange-orange-clip-art-orangeclipart-fruit-png-image_2465224.jpg">` : 0;
+        }
+
+
+        contador_fruta == 1 ?
+            caixa += 1.50 : 0;
+
+        contador_fruta == 2 ?
+            caixa += 5.00 : 0;
+
+        contador_fruta == 3 ?
+            caixa += 21.00 : 0;
+
+        contador_fruta == 4 ?
+            caixa += 50.00 : 0;
+
+        div_msg.innerHTML +=
+            `<br> Quantidade de frutas iguais sorteadas: ${contador_fruta}<br>
+        Valor ganho na rodada: ${caixa.toFixed(2)}`
+    }
+
+    function encerrar() {
+
+        div_msg.innerHTML +=
+            `<br><br>
+        Quantidade de rodadas: ${rodada}<br>
+        Valor total gasto: ${(rodada * 2).toFixed(2)}<br>
+        Valor total ganho: ${(caixa).toFixed(2)}<br>
+        `
+
+        if (caixa > rodada * 2) {
+            div_msg.innerHTML +=
+                `<br> Vá ao caixa e RECEBA R$ ${(caixa - rodada * 2).toFixed(2)}`
+
+        } else if (caixa == rodada * 2) {
+            div_msg.innerHTML +=
+                `<br> Incrível... Você nem ganhou e nem perdeu!!!!`
+                
+        } else {
+            div_msg.innerHTML +=
+                `<br> Vá ao caixa e PAGUE R$ ${(rodada * 2 - caixa).toFixed(2)}`
+        }
+    }
+
+</script>
+
+<!-- QUESTÃO UNICA
+O Caça Niquel é um jogo muito tradicional, até hoje ele atrae o interesse de milhares de pessoas, Faça um programa de um Caça Niquel que testa a sorte do usuário com quatro diferentes frutas(Melancia, Banana, Cereja ou Laranja), sendo que:
+
+1.     (01 ponto) Tenha uma select para o usuário escolher uma dessas frutas. Um botão “Pagar R$2,00 e Sortear” e outro botão “Encerrar a Noitada”
+
+
+2.     (1,5 pontos) Quando o botão “Pagar R$2,00 e Sortear” for clicado o programa deverá sortear quatro vezes as essas frutas. Observar que as frutas podem repetir. Mostrar na tela as frutas sorteadas com a mensagem do valor ganho, sendo:
+3.     (02 pontos) Para cada nova rodada guardar: o número da rodada; a fruta escolhida; as frutas sorteadas; e o valor ganho na rodada.  #ficaadica – cada vez que o botão “Pagar R$2,00 e Sortear” for clicado é uma nova rodada.
+
+
+4.     (0,5 pontos) Fazer o diagrama de atividades referente aos itens 1, 2 e 3.
+
+
+5.     Quando o botão “Encerrar a Noitada” for clicado
+
+         a.     (1,5 pontos) Emitir o RESUMO DA NOITADA tendo:
+
+                  i.      Quantidade de rodadas
+
+                 ii.      Valor total gasto
+
+                iii.      Valor total ganho
+
+                iv.      Se o valor ganho for maior que gasto, usar a mensagem “Vá ao caixa e RECEBA R$ X”, onde X é a diferença entre o ganho e o gasto.
+
+                 v.      Se o valor gasto for maior que ganho, usar a mensagem “Vá ao caixa e     PAGUE R$ Y”, onde Y é a diferença entre o gasto e o ganho.
+
+                 vi.      Se o valor ganho for igual ao gasto, usar a mensagem “Incrível... Você nem ganhou e nem perdeu!!!!”.
+
+ 
+
+            b.    (02 pontos) Emitir o DETALHE DA NOITADA, com uma linha para cada rodada com todos os dados guardados pelo item 3.
+
+========================================================
+
+6.     (0,5 pontos) Fazer o diagrama de atividades referente ao itens 5.
+
+
+7.     (01 ponto) Use os elementos de tela de forma semelhante ao apresentado nas telas acima. Mostre as frutas sorteadas na mesma linha, uma ao lado da outra, cada uma com 100px de largura. Todos os campos de valor monetário deverá ser apresentado com duas casas decimais. Use bons nomes de variáveis, funções e ids. Deixe o código organizado (identado, com linahs em branco para agrupar o código, etc).
+
+
+8.     Use somente comandos ensinados em sala de aula. Será descontados 2,0 pontos se houver o uso de qualquer comando não ensinado em aula.
+
+
+OBS. Para facilitar, use as figuras que estão nesta prova -->

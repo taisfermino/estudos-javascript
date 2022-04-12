@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Insira seu nome</p>
+    <input type="text" id="nome" name="" id="" placeholder="Digite seu nome">
+    <p>Insira sua idade</p>
+    <input type="text" id="idade" name="" id="" placeholder="Digite sua idade">
+    <br><br>
+    <button onclick="calcular()">Calcular</button>
+    <br><br>
+    <div class="lala" id="lala"></div>
+</body>
+</html>
+<script>
+    function calcular(){
+       var nomes = nome.value;
+       var idades = Number (idade.value);
+
+       if(idades < 18) {
+           lala.innerHTML = nomes + ' vai jogar PlayStation!';
+       }
+       else{
+           lala.innerHTML = nomes + ' vamos tirar a CNH?';
+       }
+    }
+</script>

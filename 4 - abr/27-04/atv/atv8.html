@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 8</title>
+</head>
+<body>
+    <p>Insira o tempo de cozimento do arroz</p>
+    <input type="text" name="" id="coz_inp">
+    <br><br>
+    <button onclick="provar()">Provar arroz</button>
+    <br><br>
+    <div id="msg"></div>
+</body>
+</html>
+<script>
+    function provar(){
+        var temp = Number(coz_inp.value);
+
+        temp == 5 ? msg.innerHTML = ` <p> Parabéns! Arroz perfeito! </p> <img src="https://d1uz88p17r663j.cloudfront.net/resized/508e90cc752880608500ad1646fd510e_ARROZ-BASICO-RECEITAS-NESTLE_1200_600.jpg" alt="" height="400px">` : msg.innerHTML = `<p> Arroz cru ou cozido demais! </p> <img src="https://i.pinimg.com/originals/7b/c4/70/7bc470f05afb6bce6e7a2755e8f0b09c.jpg" alt="" height="400px">`;
+    }
+</script>

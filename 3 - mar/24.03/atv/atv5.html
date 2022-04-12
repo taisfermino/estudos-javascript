@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Insira sua renda familiar</p>
+    <input type="text" id="renda"> <br><br>
+
+    <select id="adultos">
+        <option value="">- Selecione a quantidade de adultos -</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+    </select>
+        <br><br><br>
+        <button onclick="verificar()">Verificar classe social</button>
+        <br><br><br>
+        <div id="lala">
+            
+        </div>
+    
+</body>
+</html>
+<script>
+    function verificar(){
+        var varRenda = Number(renda.value);
+        var pessoas = Number(adultos.value);
+
+        var media = varRenda / pessoas;
+
+        if(varRenda > 16.263){
+            lala.innerHTML = '<p style="color: rgb(153, 190, 104);">Classe A</p>';
+            lala.innerHTML +=  '<br> <img src="https://media0.giphy.com/media/bwLI2JHYHpD4c3UosX/giphy.gif" alt="">';
+            lala.innerHTML += '<br> A renda média de cada adulto é R$' + media;
+        }
+        else if(varRenda > 5.223){
+            lala.innerHTML = '<p style="color: rgb(189, 188, 144);">Classe B</p>';
+            lala.innerHTML +=  '<br> <img src="https://media0.giphy.com/media/bwLI2JHYHpD4c3UosX/giphy.gif" alt="">';
+            lala.innerHTML += '<br> A renda média de cada adulto é R$' + media;
+        }
+        else if(varRenda > 2.166){
+            lala.innerHTML = '<p style="color: rgb(31, 147, 155);">Classe C</p>';
+            lala.innerHTML += '<br> A renda média de cada adulto é R$' + media;
+        }
+
+        else{
+            lala.innerHTML = '<p style="color: rgb(196, 89, 89);">Classe D e E</p>';
+            lala.innerHTML += '<br> A renda média de cada adulto é R$' + media;
+        }
+    }
+</script>

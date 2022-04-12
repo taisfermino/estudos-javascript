@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button onclick="analise()">Avaliar</button>
+    <div id="result"></div>
+    <img src="" id="imagem">
+    
+</body>
+</html>
+
+<script>
+
+    function analise() {
+        var numero = (Math.random() * 5) +1;
+
+        result.innerHTML += `<br> Nota recebida: ${numero.toFixed(1)} <br>`;
+
+        if (numero >= 0 && numero <= 0.5) {
+            result.innerHTML += `muito triste <br><br>`;
+            imagem.src = "triste.webp";
+        } 
+        else if(numero > 0.5 && numero <= 1.5){
+            result.innerHTML += `meio triste <br><br>`;
+            imagem.src = "sad.webp";
+           
+        }
+        else if(numero >= 1.5 && numero <= 3.5) {
+            result.innerHTML += `neutro <br><br>`;
+            imagem.src = "ata.png";
+            
+        } 
+        else if(numero >= 3.5 && numero <= 4.5) {
+            result.innerHTML += `feliz <br><br>`;
+            imagem.src = "slime.png";
+           
+        }
+        else {
+            result.innerHTML += `muito feliz <br><br>`;
+            imagem.src = "happy.png";
+
+            
+        }
+    }
+
+</script>
+
+<!-- 5-0 +1
+      5 + 1  -->
+
+<!-- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+0-50 incluindo os reais,
+(math.random() *(51-1)) + 1
+(math.random() *(50) + 1
+1 a 50.99
+  
+
+apenas inteiros 1-6
+
+(math.randon()*6) + 1
+1 a 6.9999
+parseInt(Math.randon()*6+1)
+
+
+
+ -->

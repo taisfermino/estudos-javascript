@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 3</title>
+</head>
+<body>
+    <label>Insira a nota</label>
+    <input type="text" name="" id="inp_nota"> 
+    <button onclick="cadastrar()">Cadastrar Nota</button> <br><br> 
+
+    <label>Insira a partir de qual nota quer analisar</label>
+    <input type="text" name="" id="inp_rever"> 
+    <button onclick="rever()">Rever as notas</button> 
+</body>
+</html>
+
+<script>
+    vt_notas = [];
+
+    function Cadastrar(){
+        vt_notas.push (Number(inp_nota.value));
+    }
+</script>

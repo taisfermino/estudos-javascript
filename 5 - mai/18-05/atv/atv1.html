@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 1</title>
+</head>
+<body>
+    <p>Insira o nome do aluno</p>
+    <input type="text" name="" id="nome_inp"><br><br>
+    <button onclick="cadastrar()">Cadastrar</button> 
+    <button onclick="pesquisar()">Pesquisar</button> <br><br>
+    <div id="msg"></div>
+</body>
+</html>
+<script>
+    vt_alunos = [];
+
+    function cadastrar(){
+        vt_alunos.push (nome_inp.value);
+        msg.innerHTML += `${nome_inp.value}<br>`;
+
+    }
+
+    function pesquisar(){
+        var aux_qnt = 0;
+        var aux_pos = '';
+        for(var i = 0; i < vt_alunos.length; i++){
+
+            if (vt_alunos[i] == nome_inp.value) {
+                aux_qnt++;
+                aux_pos += `, ${i + 1} `
+            } 
+        }
+
+        if (aux_qnt == 0){
+            alert(`O aluno ${nome_inp.value} não existe na lista`);
+        }
+        else {
+            alert(`O aluno ${nome_inp.value} aparece ${aux_qnt} vezes na lista. Nas posições ${aux_pos}`);
+        }
+    }
+    
+</script>

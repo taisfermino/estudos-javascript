@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média e Frequencia</title>
+</head>
+<body>
+    <h2>Média e Frequencia dos alunos da BandTec</h2>
+    <br><br>
+    <p>Insira a média</p> 
+    <input type="text" name="" id="mediaAlunos"> <br>
+    <p>Insira a frequencia</p>
+    <input type="text" name="" id="freqAlunos"> <br><br>
+    <button onclick="calcular()">Verificar</button> <br>
+    <div id="lala"></div>
+</body>
+</html>
+<script>
+    function calcular(){
+        var media = Number(mediaAlunos.value);
+        var frequencia = Number(freqAlunos.value);
+
+        if (media >= 6 && frequencia >= 75) {
+            lala.innerHTML = 'APROVADO!!!';
+        } else {
+            lala.innerHTML = 'Reprovado, faz as coisas direito na próxima';
+        }
+    }
+</script>

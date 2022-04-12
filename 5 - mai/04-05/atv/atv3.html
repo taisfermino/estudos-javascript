@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 3</title>
+</head>
+<body>
+    <p>Insira o nome do time que acha bom</p>
+    <input type="text" name="" id="time_bom">
+    <p>Insira o nome do time que acha ruim</p>
+    <input type="text" name="" id="time_ruim"> <br><br>
+    <button onclick="repetir()">Repetir a realidade</button> <br><br>
+    <div id="msg"></div>
+</body>
+</html>
+<script>
+    function repetir(){
+        var ax_bom = time_bom.value;
+        var ax_ruim = time_ruim.value;
+        var cont = 0;
+
+        while (cont < 10){
+            msg.innerHTML += "<b>"+ax_bom.toUpperCase()+"</b> é melhor do que <b>"+ax_ruim.toUpperCase()+"</b> <br> <br>";
+            cont ++;
+        }
+    }
+</script>

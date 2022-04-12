@@ -1,0 +1,91 @@
+body{
+    background-color: rgb(250, 242, 255); 
+    display: grid; 
+    place-items: center;
+}
+
+/* colocando divs principais lado a lado */
+.container{
+    display:flex; 
+    margin-top: 250px;
+}
+
+/* tamanho e margem das divs das bandeiras */
+.filho{
+    width: 500px; 
+    margin: 50px;
+}
+
+/* tamanho e margem da div do hino*/
+.filho2{
+    width: 500px; 
+}
+
+/* colocando divs da bandeira da flança lado a lado */
+.fr{
+    display: flex;
+}
+
+.blue{
+    background-color: blue;
+}
+
+.red{
+    background-color: red;
+}
+
+.white{
+    background-color: white;
+}
+
+/* tamanho da bandeira da holanda */
+.holanda{
+    width: 500px; 
+    height: 100px;
+}
+
+/* tamanho da bandeira da frança */
+.frança{
+    width: 200px; 
+    height: 300px;
+}
+
+/* tamanho da fonte do hino */
+p{
+    font-size:x-large;
+}
+
+.sublinhado{
+    text-decoration: underline;
+}
+
+.negrito{
+    font-weight: bold;
+}
+
+.italico{
+    font-style: italic;
+}
+
+.green{
+    color: rgb(29, 165, 29);
+}
+
+.red-font{
+    color: red;
+}
+
+.orange{
+    color: orangered;
+}
+.purple{
+    color: purple;
+}
+
+.blue-font{
+    color: blue;
+}
+
+.blue2{
+    color: rgb(58, 58, 250);
+}

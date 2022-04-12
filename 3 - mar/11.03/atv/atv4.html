@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 4</title>
+</head>
+<body>
+    <center>
+        <label for="">Informe o valor da passagem do metro</label> <br> <br>
+        <input type="text" id="valor" placeholder="Digite o valor da passagem"><br> <br>
+        <select id="tipo">
+            <option value="">- selecione o tipo de passagem -</option>
+            <option value="1">Inteira</option>
+            <option value="0.50">Meia</option>
+            <option value="0.90">Fidelidade</option>
+        </select>
+        <br><br>
+        <button onclick="ver()">Calcular</button>
+        <br><br>
+        <div id="lala"></div>
+    </center>
+</body>
+</html>
+<script>
+    function ver(){
+        var porcentagem = Number(tipo.value);
+        var preco = Number(valor.value);
+        var calculo = preco * porcentagem;
+
+        lala.innerHTML = 'Você vai pagar R$'+ calculo + ' por passagem';
+    }
+</script>

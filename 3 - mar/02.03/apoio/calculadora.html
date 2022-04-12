@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- porcentagem de lucro = (valor da venda / valor da compra - 1) * 100; -->
+    <meta name="viewport" content="width=[device-width], initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p> Entre com o primeiro numero</p>
+    <!-- input é a area onde o usuario preenche suas informações -->
+    <input type="number" id="pri_num" placeholder="Primeiro N°">
+
+    <p> Entre com o segundo numero</p>
+    <!-- input é a area onde o usuario preenche suas informações -->
+    <input type="number" id="seg_num" placeholder="Segundo N°">
+    <br>
+    <button onclick="mult()">Multiplicação</button>
+    <button onclick="div()">Divisão</button>
+    <button onclick="exp()">Exponenciação</button>
+    <button onclick="raiz()">Radiciação</button>
+    <button onclick="sub()">Subtração</button>
+    <button onclick="soma()">Soma</button>
+
+    <div id="result"></div>
+</body>
+</html>
+<script>
+    function mult(){
+        var resultado = pri_num.value * seg_num.value;
+    result.innerHTML = `O resultado é: ${resultado}`;
+    }
+
+    function div(){
+    result.innerHTML = `O resultado é: ${pri_num.value / seg_num.value}`;
+    }
+
+    function exp(){
+    result.innerHTML = `O resultado é: ${pri_num.value ** seg_num.value}`;
+    }
+
+    function raiz(){
+    result.innerHTML = `O resultado é: ${pri_num.value ** (1/seg_num.value)}`;
+    }
+
+    function sub(){
+    result.innerHTML = `O resultado é: ${pri_num.value - seg_num.value}`;
+    }
+
+    function soma(){
+        var n1 = Number(pri_num.value);
+        var n2 = 0;
+        n2 = Number(seg_num.value);
+        result.innerHTML = `O resultado é: ${n1 + n2}`;
+
+    // result.innerHTML = `O resultado é: ${Number (pri_num.value) + Number(seg_num.value)}`;
+    }
+</script>

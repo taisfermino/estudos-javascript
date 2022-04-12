@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 2</title>
+</head>
+<body>
+    <p>Preencha sua cidade natal</p>
+    <input type="text" placeholder="Cidade Natal" id="cid">
+    <p>Preencha seu ano de nascimento</p>
+    <input type="text" placeholder="Ano Nascimento" id="ano">
+    <br>
+    <button onclick="cad()">Cadastrar</button>
+    <div id="desc"></div>
+</body>
+</html>
+<script>
+    function cad(){
+        desc.innerHTML = 'Voce nasceu na cidade de '+cid.value+' em ' +ano.value;
+    }
+</script>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 14</title>
+</head>
+<body>
+    Andar atual <input type="text" name="" id="atual_inp"> <br><br>
+    Andar solicitado <input type="text" name="" id="solic_inp"> <br>
+    <button onclick="partir()">Partir</button> <br><br>
+    <div id="msg"></div>
+</body>
+</html>
+<script>
+    function partir(){
+        atual = Number(atual_inp.value);
+        solic = Number(solic_inp.value);
+
+        if (atual < 0 || atual > 20 || solic < 0 || solic > 20) {
+            alert('Andares válidos: entre 0 e 20');
+        }
+
+        else {
+
+            if(atual > solic){
+                msg.innerHTML = 'Descendo <br>';
+
+                for(i = atual; i >= solic; i--){
+                    msg.innerHTML += `Elevador no andar ${i} <br>`;
+                }
+            }
+
+            else if(atual < solic){
+                msg.innerHTML = 'Subindo <br>';
+
+                for(i = atual; i <= solic; i++){
+                    msg.innerHTML += `Elevador no andar ${i} <br>`;
+                }
+            }
+
+            else{
+                msg.innerHTML += `Elevador vai continuar onde está`;
+            }
+    }
+}
+</script>

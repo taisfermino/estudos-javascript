@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 1</title>
+</head>
+
+<body>
+    <p>Insira seu filme favorito</p>
+    <input type="text" name="" id="inp_filme"> <br><br>
+    <button onclick="cadastrar()">Cadastrar</button> <button onclick="exibir()">Exibir Painel</button> <br><br>
+    <div id="msg"></div>
+</body>
+
+</html>
+<script>
+
+    var filmes = [];
+
+    function cadastrar() {
+        var novo_filme = inp_filme.value;
+
+        filmes.push(novo_filme);
+    }
+
+    function exibir() {
+
+        if (filmes.length < 3) {
+            var filme_fav = filmes[0];
+            var filme_fav_ter = filmes[2];
+            msg.innerHTML += `Seu filme favorito: ${filme_fav} <br>`;
+            msg.innerHTML += `Seu 3º filme favorito: Ainda não existe <br>`;
+            msg.innerHTML += `Total de filmes cadastrados: ${filmes.length} <br>`;
+        }
+
+        else {
+
+            var filme_fav = filmes[0];
+            var filme_fav_ter = filmes[2];
+            msg.innerHTML = `Seu filme favorito: ${filme_fav} <br>`;
+            msg.innerHTML += `Seu 3º filme favorito: ${filme_fav_ter} <br>`;
+            msg.innerHTML += `Total de filmes cadastrados: ${filmes.length} <br>`;
+        }
+
+    }
+</script>

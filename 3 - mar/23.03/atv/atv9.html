@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Insira o tempo que deixou o arroz cozinhando</p>
+    <input type="text" name="" id="tempo">
+    <br>
+    <button onclick="verificar()">Provar Arroz</button>
+    <div id="lala"></div>
+</body>
+</html>
+<script>
+    function verificar(){
+        var tempos = Number(tempo.value);
+
+        if (tempos == 5) {
+            lala.innerHTML = 'Parabéns! Arroz perfeito! <br> <img src="https://www.receiteria.com.br/wp-content/uploads/receitas-de-arroz-soltinho-1200x774.jpg" alt="" width="500px">';
+        } else {
+            lala.innerHTML = 'Arroz cru ou cozido demais! <br> <img src="https://img.vixdata.io/pd/jpg-large/pt/sites/default/files/a/arroz-papa-1020-1400x800.jpg" alt="" width="500px">';
+        }
+    }
+</script>

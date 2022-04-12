@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="partidas" placeholder="Quantidade de partidas">
+    <br>
+    <input type="text" name="" id="gols" placeholder="Quantidade de Gols">
+    <br><br>
+    <button onclick="calcular()">Estudar atacante</button>
+    <br><br>
+    <div id="lala"></div>
+</body>
+</html>
+<script>
+    function calcular(){
+       var partida = Number(partidas.value);
+       var gol = Number(gols.value);
+
+       var media = gol / partida;
+
+        if (media > 0.6) {
+            lala.innerHTML = 'Atacante de futuro <br> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgDmE-ng-UWDpqxHW18b2PNK2eXWOwu7Sbw4olQql13oC1w_IgqXgWFi17KnLpMZYVvb4&usqp=CAU" alt="" width="500px">';
+        } else if (media < 0.2) {
+                lala.innerHTML = 'Melhor mudar de posição <br> <img src="https://www.lance.com.br/files/main_album/uploads/2017/10/04/59d4cb9e5284f.jpeg" alt="" width="500px">';
+            } else {
+                lala.innerHTML = 'Atacante mediano <br> <img src="https://dioguinho.pt/wp-content/uploads/2014/04/davidluiz7.jpg" alt="" width="500px">';
+            }
+        }
+    
+</script>

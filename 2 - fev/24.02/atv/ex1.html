@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 1</title>
+</head>
+<body>
+    <div style="display: flex; ">
+
+    <div style="margin: 75px;">
+        <h3>Meus Heróis favoritos são:</h3>
+        <div id="lala">
+
+        </div>
+        <button class="herois" onclick="herois()">Ver Herois</button>
+    </div>
+    <div style="margin: 75px;">
+        <h3>Meus Vilões favoritos são:</h3>
+        <div id="lele">
+
+        </div>
+        <button class="viloes" onclick="viloes()">Ver Vilões</button>
+    </div>
+</div>
+    
+    
+</body>
+</html>
+<script>
+function herois() {
+    lala.innerHTML = '<ol> <li><b>Homem Aranha</b></li> <li><i>Batman</i></li> <li>Ravena</li> <li>Homem de Ferro</li> <li>Mulher Maravilha</li> </ol>';
+}
+function viloes(){
+    lele.innerHTML = '<ol style="color:red;";> <li>Coringa</li> <li>Hera Venenosa</li> <li>Alerquina</li> <li>Doende Verde</li> <li>Pinguim</li> </ol>'
+}
+</script>

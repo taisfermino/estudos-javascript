@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 2</title>
+</head>
+<body>
+    <!-- onkeyup indica o que vai acontecer logo após usar uma tecla qualquer -->
+    Insira o seu nome <input id="ipt_nome" onkeyup="analisar()" >
+    <br><br>
+    <div id="div_result"></div>
+</body>
+</html>
+<script>
+    function analisar() {
+        var aux_nome = ipt_nome.value;  
+
+        if (aux_nome.length >= 10) {
+            div_result.innerHTML = `Nome Ok`;
+        } else {
+            div_result.innerHTML = `Nome deve ter pelo menos 10 letras`;
+        }
+    }
+</script>

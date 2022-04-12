@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 1</title>
+</head>
+<body>
+    <fieldset>
+        <legend>Cofrinho</legend>
+    <p>Insira o valor</p>
+    <input type="text" name="" id="valor">
+    <br><br>
+    <button onclick="depositar()">Depositar no cofrinho</button>
+    <button onclick="retirar()">Retirar do cofrinho</button>
+    <br><br>
+    <p>O valor que está guardado no seu cofrinho é de R$<span id="atual">0,00</span></p>
+</fieldset>
+</body>
+</html>
+<script>
+     
+    var aux = 0;
+    function depositar(){
+        var valorr = Number(valor.value);
+
+        aux += valorr;
+        atual.innerHTML = aux.toFixed(2);
+
+    }
+
+    function retirar(){
+        var valorr = Number(valor.value);
+
+        aux -= valorr;
+        atual.innerHTML = aux.toFixed(2);
+
+    }
+
+</script>

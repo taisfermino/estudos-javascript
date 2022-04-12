@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperatura</title>
+</head>
+<body>
+    <p>Insira a temperatura</p>
+    <input type="text" name="" id="temp">
+    <br>
+    <button onclick="analisar()">Analisar</button>
+    <br>
+    <div id="lala"></div>
+</body>
+</html>
+<script>
+    function analisar(){
+        var temperatura = Number(temp.value);
+
+        if (temperatura<22 || temperatura>25) {
+            lala.innerHTML = 'Temperatura desconfortável';
+        } else {
+            lala.innerHTML = 'Temperatura confortável';
+        }
+    }
+</script>

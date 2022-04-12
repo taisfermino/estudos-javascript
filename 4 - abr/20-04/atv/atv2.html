@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 2</title>
+</head>
+<body>
+    <p>Insira sua altura:</p>
+    <input type="text" name="" id="alt"> <br><br>
+    <button onclick="analisar()">Analisar para esportes</button> <br><br>
+    <div id="lala"></div>
+</body>
+</html>
+<script>
+    function analisar(){
+        var altura = Number(alt.value);
+
+        if (altura <= 1.60) {
+            lala.innerHTML = `Pode tentar ser piloto(a) de corrida <br> Pode tentar ser velejador(a)`;
+            
+        } 
+
+        else if (altura > 1.60 && altura <= 1.85) {
+            lala.innerHTML = `Pode tentar ser jogador de futebol ou handebol`;
+        }
+
+        else {
+            lala.innerHTML = `Pode tentar ser jogador de voleibo <br> Pode tentar ser jogador de basquete`;
+        }
+    }
+</script>

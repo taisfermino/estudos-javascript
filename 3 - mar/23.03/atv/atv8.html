@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Insira a temperatura do ambiente</p>
+    <input type="text" name="" id="temperatura">
+    <br>
+    <button onclick="verificar()">Verificar Clima</button>
+    <div id="lala"></div>
+</body>
+</html>
+<script>
+    function verificar(){
+        var temp = Number(temperatura.value);
+
+        if (temp < 10) {
+            lala.innerHTML = 'Apropriada p/ conservar alimento <br> <img src="https://www.receiteria.com.br/wp-content/uploads/receitas-de-salada-mista-2.jpg" alt="" width="500px">';
+        } else {
+            lala.innerHTML = 'Inapropriada p/ conservar alimento <br> <img src="https://i.pinimg.com/originals/53/45/13/5345137d46216aa10ecd10f00e5a3f0e.jpg" alt="" width="500px">';
+        }
+    }
+</script>

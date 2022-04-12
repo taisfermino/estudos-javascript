@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Insira sua frequencia</p>
+    <input type="text" name="" id="frequencia">
+    <br>
+    <button onclick="analisar()">Analisar frequência</button>
+    <br>
+    <div id="lala"></div>
+
+</body>
+</html>
+<script>
+    function analisar(){
+        var freq = Number(frequencia.value);
+
+        if (freq >= 50) {
+            lala.innerHTML = '<img src="https://up2apps.com.br/wp-content/uploads/2019/01/os-nerds.jpg" alt="" width="500px">';
+        } else {
+            lala.innerHTML = '<img src="https://image.freepik.com/fotos-gratis/turista-apontando-para-cima_1368-7017.jpg" alt="" width="500px">';
+        }
+    }
+</script>

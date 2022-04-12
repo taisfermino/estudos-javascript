@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Digite a quantidade de votos que Zé Buduia recebeu</p>
+    <input type="text" name="" id="qntZe">
+    <p>Digite a quantidade de votos que Maria Bigodenha recebeu</p>
+    <input type="text" name="" id="qntMaria">
+    <p>Digite a quantidade de votos Brancos</p>
+    <input type="text" name="" id="brancos">
+    <p>Digite a quantidade de votos Nulos</p>
+    <input type="text" name="" id="nulos">
+    <br><br>
+    <button onclick="result()">Resultado Eleição</button> <br> <br>
+    <div id="lala"></div>
+</body>
+</html>
+<script>
+    function result(){
+        ze = Number(qntZe.value);
+        maria = Number(qntMaria.value);
+        br = Number(brancos.value);
+        nu = Number(nulos.value);
+        var total = ze + maria + br + nu;
+        var porcZe = (total * ze) /100;
+        var porcMa = (total * maria) /100;
+        var inv = nu + br;
+        var porcIn = (total * inv) /100;
+        lala.innerHTML = `<b>Total de votos: ${total}</b><br> <b>Zé Ruela: </b> ${porcZe}% (${ze} dos votos)<br> <b>Maria Bigodenha: </b> ${porcMa}% (${maria} dos votos)<br> <b>Invalidos: </b> ${porcIn}% (${inv} dos votos)<br>`;
+    }
+</script>

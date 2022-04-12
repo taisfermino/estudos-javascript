@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo</title>
+</head>
+<body>
+    <h2>Operações com tetxos</h2>
+
+    <p>Digite uma frase:</p>
+
+    <!-- onkeyup indica o que vai acontecer logo após usar uma tecla qualquer  -->
+    <input type="text" name="" id="inp_frase" onkeyup="analisar()"> <br><br>
+
+    <div id="result"></div>
+</body>
+</html>
+<script>
+
+    function analisar(){
+        var frase = inp_frase.value;
+
+        // mostrando tudo que o usuario digita 
+        result.innerHTML = frase + '<br>';
+
+        // mostra quantos caracteres (numero de digitos)  
+        // ****** .length *******
+        result.innerHTML += frase.length + '<br>';
+
+        // retorna "true" caso COMECE com as especificações indicadas e "false" se não.
+        // ****** .startsWith('a') ******
+        result.innerHTML += frase.startsWith('a') + '<br>';
+
+        // retorna "true" caso TERMINE com as especificações indicadas e "false" se não ****** 
+        //.endsWith('s') ******
+        result.innerHTML += frase.endsWith('s') + '<br>';
+
+        // retorna a letra que esta na posição que voce especifica (conta a partir do 0)
+        // ****** [3] ******
+        result.innerHTML += frase[3] + '<br>';
+
+        // retorna a letra que esta na ultima posição
+        // ****** [.length-1] ******
+        result.innerHTML += frase[frase.length-1] + '<br>';
+
+        // retorna a 1° posição da letra expecificada
+        // ****** indexOf('a') ******
+        result.innerHTML += frase.indexOf('a') + '<br>';
+
+        // mostra a frase digitada em MAIUSCULO
+        result.innerHTML += frase.toUpperCase() + '<br>';
+
+        // mostra a frase digitada em MINUSCULO
+        result.innerHTML += frase.toLowerCase() + '<br>';
+    }
+</script>

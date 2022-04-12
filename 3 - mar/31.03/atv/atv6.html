@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 6</title>
+</head>
+<body>
+    <p>Selecione a cor do cabelo da moça</p>
+    <select id="cabelo">
+        <option value="">- cor do cabelo -</option>
+        <option value="1">Preto</option>
+        <option value="1">Vermelho</option>
+        <option value="0">Amarelo</option>
+        <option value="0">Castanho</option>
+    </select> 
+
+    <p>Insira a altura da moça</p>
+    <input type="text" name="" id="altura">
+
+    <br>
+    <button onclick="DeuMatch()">Deu Match?</button> <br>
+    <div id="lala"></div>
+</body>
+</html>
+<script>
+    function DeuMatch(){
+        var VarCabelo = Number(cabelo.value);
+        var VarAltura = Number(altura.value);
+
+        if (VarCabelo == 1 && VarAltura >= 1.70) {
+            lala.innerHTML = '<img src="https://i.pinimg.com/736x/d8/3a/06/d83a06f7f774aa8ef7f15754e7166ff5.jpg" alt="">';
+        } else {
+            lala.innerHTML = '<img src="https://thumbs.dreamstime.com/b/hombre-decepcionado-con-el-tel%C3%A9fono-celular-82024996.jpg" alt="">';
+        }
+    }
+</script>

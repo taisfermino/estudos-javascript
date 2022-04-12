@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 12</title>
+</head>
+<body>
+    <p>Insira o valor depositado</p>
+    <input type="text" name="" id="inp_dep">
+    <p>Insira o numero de meses que esse valor var ficar depositado</p>
+    <input type="text" name="" id="inp_meses"> <br><br>
+    <button onclick="ver()">Ver investimento</button><br><br>
+    <div id="msg"></div>
+</body>
+</html>
+<script>
+    function ver(){
+        var deposito = Number(inp_dep.value);
+        var meses = Number(inp_meses.value);
+        var aux = deposito;
+        var porc = deposito * 0.05;
+        for(i = 1; i <= meses; i++){
+            
+             aux = aux + porc;
+            
+            msg.innerHTML += `${i}° mês: ${aux.toFixed(2)} <br>`;
+
+            aux = aux + porc;
+        }
+    }
+</script>

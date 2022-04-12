@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quebra Queixo</title>
+</head>
+<body>
+
+    <!-- 1.Tenha três campos de entrada – loja, conta e dígito e um botão “conferir”. -->
+    <div id="campos" style="display: block;">
+        Insira seu nome:
+        <input type="text" name="" id="inp_nome"> <br>
+        Insira a loja:
+        <input type="text" name="" id="inp_loja"> <br>
+        Insira a conta:
+        <input type="text" name="" id="inp_conta"> <br>
+        Insira o digito:
+        <input type="text" name="" id="inp_digito"> <br>
+        <button onclick="conferir()">Conferir</button>
+    </div>
+
+    <!-- b) Abaixo da mensagem mostrar um campo para receber a senha; -->
+    <!-- c) Abaixo da senha dois botões: “Limpar” e “Entrar” -->
+    <div id="campos2" style="display: none;">
+        <input type="text" name="" id="inp_senha"> <br>
+        <button onclick="limpar()">Limpar</button> <button onclick="entrar()">Entrar</button>
+    </div>
+    
+</body>
+</html>
+<script>
+    function conferir(){
+
+        // 2.Ao clicar no botão “conferir”, validar os campos de entrada conforme abaixo
+        // caso tenha algum erro emitir o alert e não fazer mais nada, caso não tenha erros ir para o item 3
+        var loja = Number(inp_loja.value);
+        var conta = Number(inp_conta.value);
+        var digito = Number(inp_digito.value);
+        var nome = inp_nome.value;
+
+        var conta_digito = conta % loja;
+
+        // Loja tem que estar entre 1 e 10, caso contrário emitir alerta: “Loja invalida”;
+        if (loja <= 0 || loja > 10) {
+            alert("Loja Invalida");
+        }
+
+        // Emitir alerta “Conta invalida” se ela for menor ou igual a zero;
+        else if (conta <= 0) {
+            alert("Conta Invalida");
+        }
+
+        else{
+            // O digito tem que ser 1 quando o resto da divisão da conta pela loja for menor que 3.
+            // Caso contrário emitir alerta: “Digito invalido”.
+            if (conta_digito < 3) {
+                 if (digito != 1){
+                    alert("Digito Invalido")
+                }
+
+                else{
+                    campos.style.display = 'none';
+                    campos2.style.display = 'block';
+                    campos2.innerHTML = `Olá cliente ${nome} entre com a sua senha para a Conta ${conta}-${digito} da Loja ${loja} <br><br>`;
+
+                }
+            }
+               
+            // O digito tem que ser 2 quando o resto da divisão da conta pela loja estiver entre 3 e 6. 
+            // Caso contrário emitir alerta: “Digito invalido”.
+            if (conta_digito >= 3 && conta_digito <= 6) {
+                 if (digito != 2){
+                    alert("Digito Invalido")
+                }
+                
+                else{
+                    campos.style.display = 'none';
+                    campos2.innerHTML = `Olá cliente ${nome} entre com a sua senha para a Conta ${conta}-${digito} da Loja ${loja}`;
+                }
+            }
+
+            // O digito tem que ser 3 quando o resto da divisão da conta pela loja for acima de 6.
+            // Caso contrário emitir alerta: “Digito invalido”.
+            if (conta_digito > 6) {
+                 if (digito != 3){
+                    alert("Digito Invalido")
+                }
+                
+                else{
+                    campos.style.display = 'none';
+                    campos2.innerHTML = `Olá cliente ${nome} entre com a sua senha para a Conta ${conta}-${digito} da Loja ${loja}`;
+                }
+            }
+
+            
+        }
+    }
+</script>

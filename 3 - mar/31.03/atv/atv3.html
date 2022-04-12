@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 3</title>
+</head>
+<body>
+    <p>Voce tem no banco: R$<span id="valor">0.00</span></p>
+    <p id="mensagem"></p>
+    <br><br>
+    <button onclick="Depositar()">Depositar 50</button>
+    <button onclick="Sacar()">Sacar 20</button>
+</body>
+</html>
+<script>
+    var saldo = 0;
+
+    function Depositar(){
+        saldo += 50;
+        atualizar();
+    }
+
+    function Sacar(){
+        saldo -= 20;
+        atualizar();
+    }
+
+    function atualizar(){
+        valor.innerHTML = `${saldo.toFixed(2)}`;
+
+        var frase;
+        var cor;
+        if (saldo < 0 || saldo > 600) {
+            frase = "Você gasta demais ou é mão de vaca!";
+            cor = "red";
+        } else {
+            frase = "Você tem as finanças equilibradas";
+            cor = "blue";
+        }
+        mensagem.innerHTML = frase;
+        mensagem.style.color = cor;
+    
+    }
+</script>

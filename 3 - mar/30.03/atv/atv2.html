@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Insira a primeira nota</p>
+    <input type="text" name="" id="notaum">
+    <p>Insira a segunda nota</p>
+    <input type="text" name="" id="notadois">
+    <p>Insira a frequencia</p>
+    <input type="text" name="" id="freq">
+    <br>
+    <button onclick="verificar()">Verifica</button>
+</body>
+</html>
+<script>
+    function verificar(){
+        var nota1 = Number(notaum.value);
+        var nota2 = Number(notadois.value);
+        var frequencia = Number(freq.value);
+
+        var media = (nota1 + nota2)/ 2
+        if (nota1>=5 && nota2>=5 && media>=6 && frequencia >= 75) {
+            alert('ALUNO APROVADO');
+        } else {
+            alert('ALUNO REPROVADO');
+        }
+    }
+</script>

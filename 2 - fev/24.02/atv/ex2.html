@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 2</title>
+</head>
+<body>
+    <center>
+    <div style="display: flex;">
+        <button style="margin: 8px;" onclick="GolRemo()">Gol do Remo</button>
+        <button style="margin: 8px;" onclick="GolPay()">Gol do Paysandu</button>
+        <button style="margin: 8px;" onclick="EscRemo()">Escanteio para o Remo</button>
+        <button style="margin: 8px;" onclick="EscPay()">Escanteio para o Paysandu</button>
+    </div>
+
+    <h3>Placar do jogo</h3> </center>
+    
+    <div id="Placar">
+
+    </div>
+</body>
+</html>
+<script>
+    function GolRemo() {
+    Placar.innerHTML += '<span style="color:darkblue;">Gol do Remo -> Gol do <b>Leão<b></span><br><br>'
+    }
+    function GolPay() {
+    Placar.innerHTML += '<span style="color: cyan;">Gol do Paysandu -> Goool da <i>Mucura<i>!</span><br><br>'
+    }
+    function EscRemo() {
+    Placar.innerHTML += '<span style="color: darkblue;">Escanteio para o Remo -> Escanteio para o Leão!</span><br><br>'
+    }    
+    function EscPay() {
+    Placar.innerHTML += '<span style="color: cyan;">Escanteio para o Paysandu -> Escanteio para a Mucura!</span><br><br>'
+    }
+
+</script>

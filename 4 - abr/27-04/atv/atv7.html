@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 7</title>
+</head>
+<body>
+    <p>Insira a temperatura do ambiente</p>
+    <input type="text" name="" id="temp_inp">
+    <br><br>
+    <button onclick="verificar()">Verificar clima</button>
+    <br><br>
+    <div id="msg"></div>
+</body>
+</html>
+<script>
+    function verificar(){
+        var temp = Number(temp_inp.value);
+
+        temp < 10 ? msg.innerHTML = `<img src="https://cdn.wizard.com.br/wp-content/uploads/2017/01/05115936/aprenda-os-nomes-das-frutas-em-ingles.jpg" alt="" height="400px">` : msg.innerHTML = `<img src="https://c8.alamy.com/compfr/p4092t/frutas-podres-jogadas-fora-em-lixo-de-supermercado-p4092t.jpg" alt="" height="400px">`;
+    }
+</script>

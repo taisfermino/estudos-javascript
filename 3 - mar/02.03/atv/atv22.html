@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Digite a quantidade de metros de cano que deseja desentupir:</p>
+    <input type="text" name="" id="metros">
+    <br>
+    <button onclick="calcula()">Calcular</button>
+    <div id="lala"></div>
+</body>
+</html>
+
+<script>
+    function calcula(){
+         m = Number(metros.value);
+        var nicanor = (10 * m) + 50;
+        var roti = (9.8 * m) + 600;
+        var dif = roti - nicanor;
+
+        lala.innerHTML = `O serviço pela Nicanor sai por R$ ${nicanor},00 <br> O serviço pela Rotirute sai por R$ ${roti},00 <br> A diferença dos valores é de R$ ${dif},00`;
+    }
+</script>

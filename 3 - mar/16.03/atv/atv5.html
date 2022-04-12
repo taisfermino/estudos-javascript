@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 5</title>
+</head>
+<body>
+    <p>Insira o valor total da pizza</p>
+        <input type="text" id="pizza">
+    <p>Insira a quantidade de pessoas</p>
+        <input type="text" id="amigos"><br><br>
+    <button onclick="ver()">Rola a Pizza?</button> <br><br>
+    <div id="lala"></div>
+
+   
+</body>
+</html>
+
+<script>
+    function ver(){
+       var valor = Number(pizza.value);
+       var pessoas = Number(amigos.value);
+
+       var cada = valor / pessoas;
+
+       if (cada>20) {
+           lala.innerHTML = 'Cada amigo vai pagar R$' + cada.toFixed(2) + ' pela pizza<br> <b><i style="color: rgb(38, 97, 173);">Deu ruim! Pizza muito cara!</i></b>';
+       } else {
+           lala.innerHTML = 'Cada amigo vai pagar R$' + cada.toFixed(2) + ' pela pizza';
+       }
+    }
+</script>

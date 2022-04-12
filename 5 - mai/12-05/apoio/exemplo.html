@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo</title>
+</head>
+<body>
+    <p>Informe uma fruta</p>
+    <input type="text" name="" id="in_nova_fruta"> <br>
+    <button onclick="cadastrar()">Cadastrar</button>
+
+    <p>Pesquisar fruta</p>
+    <input type="text" name="" id="in_pesquisa"> <br>
+    <button onclick="pesquisar()">Pesquisar</button> <br><br>
+
+    <div id="msg"></div>
+</body>
+</html>
+<script>
+
+    var frutas = [];
+
+    function cadastrar(){
+        var nova_fruta = in_nova_fruta.value;
+
+        frutas.push(nova_fruta);
+    }
+
+    function pesquisar(){
+        var pesquisa = Number(in_pesquisa.value);
+        var pesquisa_verdadeira = pesquisa - 1;
+
+        if (pesquisa <= frutas.length){
+            var fruta_encontrada = frutas[pesquisa_verdadeira];
+            msg.innerHTML = `A ${pesquisa}° fruta cadastrada foi: ${fruta_encontrada}`;
+        }
+        else{
+            msg.innerHTML = `Não existe uma ${pesquisa}° fruta cadastrada`
+        }
+    }
+</script>

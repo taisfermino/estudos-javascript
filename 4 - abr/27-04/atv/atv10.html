@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 10</title>
+</head>
+<body>
+    <p>Insira a quantidade de partidas</p>
+    <input type="text" name="" id="partidas_inp">
+    <p>Insira a quantidade de gols</p>
+    <input type="text" name="" id="gols_inp">
+    <br><br>
+    <button onclick="estudar()">Estudar atacante</button>
+    <br><br>
+    <div id="msg"></div> <br><br>
+    <div id="msg2"></div>
+    
+</body>
+</html>
+<script>
+    function estudar(){
+        var partidas = Number(partidas_inp.value);
+        var gols = Number(gols_inp.value);
+
+        var media = gols / partidas;
+
+        media < 0.2 ? msg.innerHTML = `<p>Melhor mudar de posição</p> <img src="https://cdn.acritica.net/img/pc/450/300/dn_noticia/2020/02/1582839551.jpeg" alt="" height="400px"> ` : media >= 0.2 && media <= 0.6 ? msg.innerHTML = `<p>Atacante mediano</p> <img src="https://img.estadao.com.br/resources/jpg/0/6/1555722830260.jpg" alt="" height="400px">` : msg.innerHTML = `<p>Atacante de futuro</p> <img src="https://pracarreiras.com.br/wp-content/uploads/2019/03/Profissa%CC%83o-em-Jogador-de-Futebol.jpg" alt="" height="400px">`;
+        msg2.innerHTML = `Sua média de gols/partida é de ${media.toFixed(1)}`;
+    }
+</script>

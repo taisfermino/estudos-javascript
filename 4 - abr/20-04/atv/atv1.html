@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 1</title>
+</head>
+
+<body>
+    <p>Insira seu login</p>
+    <input type="text" name="" id="login">
+    <p>Insira sua senha</p>
+    <input type="text" name="" id="senha">
+    <br><br>
+    <button onclick="verificar()">Entrar</button> <br><br>
+    <div id="msg"></div>
+
+</body>
+
+</html>
+<script>
+    function verificar() {
+        if (login.value == "aidimin" && senha.value == "seinha") {
+            msg.innerHTML = `<p style="color: rgb(30, 80, 126);">Usuário autenticado com sucesso!</p>`;
+        } else {
+            if (login.value != "aidimin" && senha.value != "seinha") {
+                msg.innerHTML = `<span style="color: rgb(163, 22, 22);">Seu login está inválido!</span> | <span style="color: rgb(163, 22, 22);">Sua senha está inválida!</span>`;
+            }
+            else if (login.value != "aidimin") {
+                msg.innerHTML = `<p style="color: rgb(163, 22, 22);">Seu login está inválido!</p>`;
+            }
+
+            else if (senha.value != "seinha") {
+                msg.innerHTML = `<p style="color: rgb(163, 22, 22);">Sua senha está inválida!</p>`;
+                alert("Entre em contato com o suporte para recuperar sua senha");
+            }
+        }
+    }
+</script>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 11</title>
+</head>
+<body>
+    <p>Insira o KI base do Guerreiro Sayajin</p>
+    <input type="text" name="" id="ki" placeholder="Ki Base">
+    <br><br>
+    <h3>Transformar em:</h3><br>
+    <button onclick="ssj()">SSJ</button>
+    <button onclick="ssj2()">SSJ2</button>
+    <button onclick="ssj3()">SSJ3</button>
+    <div id="lala">
+
+    </div>
+</body>
+</html>
+<script>
+    function ssj(){
+        var kii = 50 * ki.value;
+        lala.innerHTML = `Após se transformar em SSJ o ki desse Sayajin passa a ser de ${kii}`;
+    }
+
+    function ssj2(){
+        var kii = 100 * ki.value;
+        lala.innerHTML = `Após se transformar em SSJ2 o ki desse Sayajin passa a ser de ${kii}`;
+    }
+
+    function ssj3(){
+        var kii = 200 * ki.value;
+        lala.innerHTML = `Após se transformar em SSJ3 o ki desse Sayajin passa a ser de ${kii}`;
+    }
+</script>

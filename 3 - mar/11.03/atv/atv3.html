@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 3</title>
+</head>
+<body>
+    <center>
+        <h3>Veja o escudo do seu time</h3>
+            <select id="times">
+                <option value="" >- Selecione o time</option>
+                <option value="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Brasao_do_Sao_Paulo_Futebol_Clube.svg/1027px-Brasao_do_Sao_Paulo_Futebol_Clube.svg.png">São Paulo</option>
+                <option value="https://upload.wikimedia.org/wikipedia/commons/9/92/LogoSantosFC.png">Santos</option>
+                <option value="https://i.pinimg.com/originals/fb/94/4a/fb944a7090471ddee8af7be70ce49f44.png">Palmeiras</option>
+                <option value="https://i.pinimg.com/originals/47/36/4d/47364d004bdf64f78d736a8cbedde9aa.png">Corinthians</option>
+            </select>
+            <br><br>
+            <button onclick="ver()">Visualizar Escudo</button>
+            <br><br><br>
+            <div id="lala"> </div>
+
+    </center>
+</body>
+</html>
+<script>
+    function ver(){
+        var link = times.value;
+        lala.innerHTML = '<img src="'+ link +'" alt="" height="300px">';
+    }
+</script>

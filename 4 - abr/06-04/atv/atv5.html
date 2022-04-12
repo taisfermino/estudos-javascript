@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Digite o seu nome: <input id="ipt_nome" type="text" onkeyup="analisar()"><br><br>
+    <div id="result"></div>
+</body>
+</html>
+
+
+<script>
+    function analisar(){
+        var nome =  ipt_nome.value;
+        
+        nome = nome.trimStart();
+        nome = nome.trimEnd();
+
+        if (nome.indexOf('fogo') >= 0) {
+        result.innerHTML = `Com fogo não se brinca!`}
+
+        else if (nome.length >= 10) {
+            result.innerHTML = `Nome OK.`
+        }else {
+            result.innerHTML = `Nome deve ter pelo menos 10 letras.`
+    
+        }
+    
+    }
+    </script>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 4</title>
+</head>
+<body>
+    <center>
+    <h3>Brasil X Alemanha</h3> 
+    <div style="display: flex;">
+        <button style="margin: 8px;" onclick="GolBr()">Gol do Brasil</button>
+        <button style="margin: 8px;" onclick="GolAl()">Gol da Alemanha</button>
+    </div>
+</center>
+    <div id="Placar">
+    <h4><b>Tempo Real do Jogo</b></h4>
+    </div>
+</body>
+</html>
+<script>
+    function GolBr() {
+    Placar.innerHTML += '<span style="color: rgb(32, 112, 112);" > É Gollllllll do Brasilllll!</span> <br><br>'
+    }
+    function GolAl() {
+    Placar.innerHTML += '<span style="background-color: rgb(117, 15, 15); color:rgb(230, 188, 2);" >É Gollllllll da Alemanha</span> <br><br>'
+    }
+
+</script>

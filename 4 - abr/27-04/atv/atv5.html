@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 5</title>
+</head>
+<body>
+    <p>Insira o valor maximo por amigo</p>
+    <input type="text" name="" id="max_inp">
+
+    <p>Insira o valor da pizza</p>
+    <input type="text" name="" id="pizza_inp">
+    <p>Insira a quantidade de amigos</p>
+
+    <input type="text" name="" id="amgs_inp">
+    <br><br>
+    <button onclick="calcular()">Rola a pizza?</button>
+    <br><br>
+    <div id="msg"></div>
+</body>
+</html>
+<script>
+    function calcular(){
+        var max = Number(max_inp.value);
+        var pizza = Number(pizza_inp.value);
+        var amgs = Number(amgs_inp.value);
+
+        var div_amg = pizza / amgs;
+
+        div_amg > max ? msg.innerHTML = `Cada amigo vai pagar R$${div_amg} pela pizza <br> Deu ruim! Pizza muito cara!`  : msg.innerHTML = `Cada amigo vai pagar R$${div_amg} pela pizza <br> Uhu! Vamos pedir a pizza!` ;
+    }
+</script>

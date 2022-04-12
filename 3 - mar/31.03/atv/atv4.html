@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 4</title>
+</head>
+<body>
+    <h3>Voce ja clicou <span id="lala">0</span> vezes <span id="lele"></span></h3>
+    
+    <br><br>
+    <button onclick="contar()">Clique cabalístico</button>
+</body>
+</html>
+<script>
+    var clics = 0;    
+    function contar(){
+    clics = clics + 1;
+
+    lala.innerHTML = clics;   
+
+    if (clics == 3 || clics == 4 || clics == 7 || clics == 10) {
+        lele.innerHTML = ' e Juliana gosta desse número!';
+    }
+
+    else{
+        lele.innerHTML = '';
+    }
+}
+</script>

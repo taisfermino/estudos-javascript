@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 9</title>
+</head>
+<body>
+    <p>Insira a 1° nota</p>
+    <input type="text" name="" id="nota1_inp">
+    <p>Insira a 2° nota</p>
+    <input type="text" name="" id="nota2_inp">
+    <br><br>
+    <button onclick="verificar()">Verificar Resultado</button>
+    <br><br>
+    <div id="msg"></div>
+</body>
+</html>
+<script>
+    function verificar(){
+        var nota1 = Number(nota1_inp.value);
+        var nota2 = Number(nota2_inp.value);
+
+        var media = (nota1 + nota2)/2;
+
+        media < 6 ? msg.innerHTML = `<p>Infelizmente reprovado</p>` : media > 6 && media <= 7.5 ? msg.innerHTML = `<p>Aprovado - Automação, Seg ou Testes</p>` : msg.innerHTML = `<p>Aprovado - Dev</p>`;
+    }
+</script>

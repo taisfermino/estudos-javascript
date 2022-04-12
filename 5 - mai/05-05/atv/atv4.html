@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 4</title>
+</head>
+
+<body>
+    <p>Inisra o número de sorteios</p>
+    <input type="text" name="" id="sorteios"> <br>
+    <button onclick="sortear()">Sortear a sorte</button> <br><br>
+    <div id="msg"></div>
+
+</body>
+
+</html>
+<script>
+    function sortear() {
+        var num = Number(sorteios.value);
+        msg.innerHTML = ``;
+
+        for (var cont = 0; cont < num; cont++) {
+            var n = parseInt((Math.random() * 10000 + 0));
+
+            if (n >= 0 && n <= 1000) {
+                msg.innerHTML += `${n}<br><img src="https://i.pinimg.com/474x/48/80/9b/48809b84353e9aebef7b6f3d7c3e1263.jpg" alt="" width="200px"><br><br>`
+            }
+            else if (n > 1000 && n <= 5000) {
+                msg.innerHTML += `${n}<br><img src="https://cdn-0.emojis.wiki/emoji-pics/facebook/face-without-mouth-facebook.png" alt="" width="200px"><br><br>`
+            }
+            else {
+                msg.innerHTML += `${n}<br><img src="https://i.pinimg.com/originals/30/79/39/307939d6388aa145b2fb0142a8b1e91b.png" alt="" width="200px"><br><br>`
+            }
+
+        }
+    }
+</script>

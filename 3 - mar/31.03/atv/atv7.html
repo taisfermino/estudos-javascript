@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Selecione o tipo de arroz</p>
+    <select name="" id="sel_arroz">
+        <option value="">Selecione o tipo de arroz</option>
+        <option value="1">Integral</option>
+        <option value="0">Branco</option>
+    </select>
+    <br>
+
+    <p>Insira o tempo (em minutos) de cozimento</p>
+    <input type="text" name="" id="min_cozimento">
+
+    <p>Insira a quantidade (em gramas) de sal</p>
+    <input type="text" name="" id="sal_gramas">
+    <br>
+    <button onclick="avaliar()">Avaliar Arroz</button>
+    <br>
+    <div id="lala"></div>
+</body>
+</html>
+<script>
+    function avaliar(){
+        var arroz = Number(sel_arroz.value);
+        var tempo = Number(min_cozimento.value);
+        var sal = Number(sal_gramas.value);
+
+        if(arroz == 0 && tempo == 10){
+            if (sal < 1 || sal > 10){
+                lala.innerHTML = 'Seu arroz não está perfeito <br> <img src="https://exame.com/wp-content/uploads/2019/10/jacquinho.jpg" alt="" width="500px">';
+            }
+            else{
+                lala.innerHTML = 'Arroz perfeito <br> <img src="https://d1uz88p17r663j.cloudfront.net/resized/508e90cc752880608500ad1646fd510e_ARROZ-BASICO-RECEITAS-NESTLE_1200_600.jpg" alt="" width="500px">';
+            }
+        }
+
+    else{
+            if(arroz == 1 && tempo == 20){
+                if(sal < 1 || sal > 15){
+                    lala.innerHTML = 'Seu arroz não está perfeito <br> <img src="https://exame.com/wp-content/uploads/2019/10/jacquinho.jpg" alt="" width="500px">';
+                }
+                else{
+                    lala.innerHTML = 'Arroz perfeito <br> <img src="https://d1uz88p17r663j.cloudfront.net/resized/508e90cc752880608500ad1646fd510e_ARROZ-BASICO-RECEITAS-NESTLE_1200_600.jpg" alt="" width="500px">';
+                }
+            }
+        }
+}
+</script>

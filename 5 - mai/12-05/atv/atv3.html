@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 3</title>
+</head>
+
+
+<body>
+    Insira o nome do filme <input type="text" name="" id="inp_filme">
+    <button onclick="cadastrar()">Cadastrar</button> <br><br>
+    <div id="msg"></div> 
+   
+</body>
+</html>
+<script>
+    var filmes = [];
+
+    function cadastrar() {
+        msg.innerHTML='';
+
+        filmes.push(inp_filme.value);
+
+        for(cont = 0; cont <= filmes.length; cont++){
+            if (filmes.length % 2 == 0) {
+                msg.innerHTML += `<p style="color: rgb(107, 204, 221);">${filmes[cont]}<br></p>`;
+            } else {
+                msg.innerHTML += ` <p style="color: rgb(241, 90, 90);">${filmes[cont]}<br></p>`;
+            }
+        }
+    }
+</script>

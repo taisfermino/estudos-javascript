@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 6</title>
+</head>
+<body>
+    <p>Insira sua senha</p>
+    <input id="inp_senha" onkeyup="analisar()" >
+    <br>
+    <div id="lala"></div>
+</body>
+</html>
+<script>
+    function analisar(){
+        var senha = inp_senha.value;
+        senha = senha.trimStart().trimEnd();
+
+        lala.innerHTML = `Senha padrão: ${senha}<br>`;
+
+        senha = senha.replaceAll("A", "@").replaceAll("a", "@").replaceAll("E", "3").replaceAll("e", "3");
+
+        lala.innerHTML += `Senha melhorada: ${senha}<br>`;
+    }
+</script>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BandTec</title>
+</head>
+<body>
+    <p>Insira o nome da empresa</p>
+    <input type="text" name="" id="empresa_inp">
+
+    <p>Insira o valor da bolsa da empresa</p>
+    <input type="text" name="" id="bolsa_inp">
+
+    <p>Insira o valor do VR da empresa</p>
+    <input type="text" name="" id="vr_inp">
+
+    <p>Insira o tempo de deslocamento da empresa para a bandtec</p>
+    <input type="text" name="" id="deslocamento_inp">
+
+    <br> <button onclick="iai()">É preferida?</button> <br>
+    <div id="lala"></div>
+</body>
+</html>
+<script>
+    function iai(){
+        var nome = empresa_inp.value;
+        var bolsa = Number(bolsa_inp.value);
+        var vr = Number(vr_inp.value);
+        var tempo = Number(deslocamento_inp.value);
+
+        if (bolsa >= 1800 || vr >= 20 || tempo <= 30) {
+            lala.innerHTML = 'A empresa ' +nome+' é uma de suas preferências';
+        } else {
+            lala.innerHTML = 'A empresa ' +nome+' está fora da sua lista';
+        }
+    }
+</script>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 7</title>
+</head>
+<body> 
+    <center>
+        <button onclick="limpa()">Resetar Programa</button>
+        <button  id="btnescudo" style="display: block;" onclick="esconde()">Esconder Escudos</button>
+        <button  id="btnescudomostra" style="display: none;" onclick="mostra()">Mostrar Escudos</button>
+         <br>
+         <div id="divescudo" style="display: block;">
+        <img  onclick="spfc()" src="https://res.cloudinary.com/lptennis/image/upload/v1574360065/w9zs79bmsvsd3l6zv7i0.jpg" alt="" height="300px">
+        <img  onclick="sc()" src="https://imagens.ebc.com.br/nF8ErR8x8-pN3ja_omzkO8yS-BI=/754x0/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/logo_corinthians_001.jpg?itok=HZdVqmd-" alt="" height="300px" >
+        <img  onclick="sfc()" src="https://pbs.twimg.com/profile_images/1201694733376118786/d96e39ad_400x400.jpg" alt="" height="300px" >
+        <img  onclick="pfc()" src="https://img.elo7.com.br/product/zoom/2BF496C/matriz-de-bordado-escudo-time-de-futebol-palmeira-maquina-de-bordar.jpg" alt="" height="300px" ">
+        </div>
+<br><br><br>
+        <div id="taça">
+
+        </div>
+        
+    </center>
+</body>
+</html>
+<script>
+function spfc(){
+    taça.innerHTML = ' <img src="https://i.pinimg.com/originals/1a/d6/5b/1ad65b315e150c4907b7bd6ffa247196.jpg" alt="" height="300px"> <img src="https://i.pinimg.com/originals/1a/d6/5b/1ad65b315e150c4907b7bd6ffa247196.jpg" alt="" height="300px"> <img src="https://i.pinimg.com/originals/1a/d6/5b/1ad65b315e150c4907b7bd6ffa247196.jpg" alt="" height="300px">';
+}
+
+function sc(){
+    taça.innerHTML = ' <img src="https://i.pinimg.com/originals/1a/d6/5b/1ad65b315e150c4907b7bd6ffa247196.jpg" alt="" height="300px"> <img src="https://i.pinimg.com/originals/1a/d6/5b/1ad65b315e150c4907b7bd6ffa247196.jpg" alt="" height="300px">';
+}
+
+function sfc(){
+    taça.innerHTML = ' <img src="https://i.pinimg.com/originals/1a/d6/5b/1ad65b315e150c4907b7bd6ffa247196.jpg" alt="" height="300px"> <img src="https://i.pinimg.com/originals/1a/d6/5b/1ad65b315e150c4907b7bd6ffa247196.jpg" alt="" height="300px">';
+}
+
+function pfc(){
+    taça.innerHTML = ' <img src="http://pm1.narvii.com/7570/30f52c139b36f1649abe2525df52e7174432c854r1-720-867v2_uhq.jpg" alt="" height="300px">';
+}
+
+function limpa(){
+    taça.innerHTML = '';
+}
+
+function esconde() {      
+        btnescudo.style.display = "none";
+        divescudo.style.display = "none";
+        taça.style.display = "none";
+        btnescudomostra.style.display = "block";
+    }
+
+    function mostra() {      
+        btnescudo.style.display = "block";
+        divescudo.style.display = "block";
+        taça.style.display = "block";
+        btnescudomostra.style.display = "none";
+    }
+</script>

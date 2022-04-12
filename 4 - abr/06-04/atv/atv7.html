@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 7</title>
+</head>
+<body>
+    <p>Digite uma frase</p>
+    <input type="text" name="" id="frase_inp" onkeyup="analisar()">
+    <br><br>
+    <div id="lala"></div>
+</body>
+</html>
+<script>
+    function analisar(){
+        var frase = frase_inp.value;
+        lala.innerHTML += `${frase[frase.length -1]}<br>`;
+    }
+</script>

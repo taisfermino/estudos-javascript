@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Insira a quantidade de chocolates comprados</p>
+    <input type="text" name="" id="chocolates" placeholder="Digite o numero de chocolates">
+    <br><br>
+    <button onclick="comprar()">Comprar</button>
+    <div id="lala"></div>
+</body>
+</html>
+<script>
+    function comprar(){
+        var chocolate = Number(chocolates.value);
+        if(chocolate <= 12){
+            total = chocolate * 3;
+            lala.innerHTML = 'o valor da sua compra foi de '+ total + ',00';
+        }
+        else{
+            total = chocolate * 2.5;
+            lala.innerHTML = 'o valor da sua compra foi de '+ total + '0';
+        }
+        
+    }
+</script>
